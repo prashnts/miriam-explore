@@ -1,3 +1,16 @@
 {% extends 'base.html' %}
+{% load brunch %}
 
 {% block root-title %}Browser{% endblock %}
+
+{% block content %}
+<div id='browserEntry'></div>
+{% endblock %}
+
+{% block styles %}
+  {{ 'browser' | style_bundle }}
+{% endblock %}
+
+{% block javascript %}
+  {{ 'browser' | js_bundle }}
+{% endblock %}

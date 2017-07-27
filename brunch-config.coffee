@@ -33,8 +33,8 @@ bundles = do ->
   for path in watched
     cpath = path.replace /\/?frontend/, ''
     app = if /^frontend/.test path then 'common' else cpath.replace /\//, '_'
-    bndls.js["js/#{app}.js"]    = new RegExp "^#{path}\/[_\\d\\w]+\\.\\w+$"
-    bndls.css["css/#{app}.css"] = new RegExp "^#{path}\/[_\\d\\w]+\\.\\w+$"
+    bndls.js["js/#{app}.js"]    = new RegExp "^#{path}\/[\\-_\\d\\w]+\\.\\w+$"
+    bndls.css["css/#{app}.css"] = new RegExp "^#{path}\/[\\-_\\d\\w]+\\.\\w+$"
   bndls
 
 console.log "==> #{unless PROD then 'Dev' else 'Production'} build"

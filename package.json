@@ -22,6 +22,7 @@
     "coffeelint-brunch": "^2.10.0",
     "css-brunch": "^2.10.0",
     "d3": "^4.10.0",
+    "echarts": "^3.6.2",
     "fs-extra": "^4.0.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",

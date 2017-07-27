@@ -1,0 +1,83 @@
+{% load static %}
+{% load brunch %}
+{% load revision %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>{% block root-title %}{% block title %}{% endblock %} // miRiam{% endblock %}</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+  <link rel='apple-touch-icon' sizes='180x180'
+        href='{% static "img/favicon/apple-touch-icon.png" %}'>
+  <link rel='icon' type='image/png'
+        href='{% static "img/favicon/favicon-32x32.png" %}' sizes='32x32'>
+  <link rel='icon' type='image/png'
+        href='{% static "img/favicon/favicon-16x16.png" %}' sizes='16x16'>
+  <link rel='manifest'
+        href='{% static "img/favicon/manifest.json" %}'>
+  <link rel='mask-icon'
+        href='{% static "img/favicon/safari-pinned-tab.svg" %}' color='#5bbad5'>
+  <link rel='shortcut icon'
+        href='{% static "img/favicon/favicon.ico" %}'>
+  <meta name='msapplication-config'
+        content='{% static "img/favicon/browserconfig.xml" %}'>
+  <meta name='theme-color' content='#ffffff'>
+
+  <meta itemprop='csrf-token' content='{{ csrf_token }}'>
+
+  <link rel='stylesheet' type='text/css' href='{% static "css/vendors.css" %}'>
+  <link rel='stylesheet' type='text/css' href='{% static "css/miriam.css" %}'>
+  {% block styles %}
+  {% endblock %}
+  {% if debug %}
+  <script type='text/javascript'>
+    window.brunch = {server: 'localhost'};
+  </script>
+  {% endif %}
+</head>
+<body class='{% block body-class %}{% endblock %}'>
+  <header>
+  {% block header-content %}
+    <a href='#mainblock' class='skiptocontent' tabindex='1'>Skip to Content</a>
+    <nav data-toggle-target class='pt-navbar pt-navbar-fixed'>
+      <div class='np-container'>
+        <div class='pt-navbar-group pt-align-left'>
+          <a href='/'>
+            <span>miriam</span>
+            <img src='{% static "img/brand/logo-alt-1x.png" %}' alt='miriam homepage' title='Home'><abbr>{% revision %}</abbr>
+          </a>
+        </div>
+        <div class='pt-navbar-group pt-align-right'>
+        </div>
+      </div>
+    </nav>
+    {% block hero-content %}
+    {% endblock %}
+  {% endblock %}
+  </header>
+  <main id='placetRoot'>
+  {% block main-content %}
+    <div>
+    {% block content %}
+    {% endblock %}
+    </div>
+  {% endblock %}
+  </main>
+  <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+    <div class='np-container'>
+      <p class="f6">
+        <span class="dib mr4 mr5-ns">&copy; 2016 <b class="ttu">miriam</b></span>
+        <a class="link white-80" href='{% url "privacy_policy" %}'> Privacy </a> /
+        <a class="link white-80" href='{% url "privacy_policy" %}'> Contact </a>
+      </p>
+    </div>
+  </footer>
+
+  {% block main-javascript %}
+    <script type='text/javascript' src='{% static "js/vendors.js" %}'></script>
+    {{ 'miriam' | js_bundle }}
+    {% block javascript %}
+    {% endblock %}
+  {% endblock %}
+</body>
+</html>

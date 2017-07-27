@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load brunch %}
+
+
+{% block content %}
+  <div id='quake' class='quake'>
+    <span id='oat'
+        rv-coor-x='cx'
+        rv-coor-y='cy'
+        rv-text='emote'
+        rv-class-facing-left='fl'></span>
+    <div id='woot'></div>
+  </div>
+{% endblock %}
+
+{% block styles %}
+  {{ 'ossm/quake' | style_bundle }}
+{% endblock %}
+
+{% block javascript %}
+  {{ 'ossm/quake' | js_bundle }}
+{% endblock %}

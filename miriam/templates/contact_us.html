@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+{% block body-class %}contact{% endblock %}
+
+{% block content %}
+<div class='map'>
+  <iframe frameborder='0' src='https://www.google.com/maps/embed/v1/place?q=cluster%20innovation%20centre&key=AIzaSyDsGSy5FxQPDhH0ohCD8gU3ltxOeUnawOk' allowfullscreen></iframe>
+</div>
+<section>
+  <h2>There are multiple ways to Contact Us</h2>
+
+  <ul>
+    <li>
+      <p>Write to us at <a href='mailto:noobz@convoke.io'>noobz@convoke.io</a>.</p>
+    </li>
+    <li>
+      <p>If postal addresses are your thing:</p>
+      <address>
+        <span>104, Computer Centre</span><br>
+        <span>Cluster Innovation Centre</span><br>
+        <span>G.C Narang Marg, University of Delhi</span><br>
+        <span>Delhi - 110007</span>
+      </address>
+    </li>
+    <li>
+      <p>Transit: Vishwavidyalaya station of Delhi Metro service.</p>
+    </li>
+  </ul>
+
+  <form action='' method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Send message'/>
+  </form>
+</section>
+{% endblock %}

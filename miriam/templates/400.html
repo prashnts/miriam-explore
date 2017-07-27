@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body-class %}error{% endblock %}
+
+{% block content %}
+{% block error-message %}
+  <h2>400 <small>Bad Request</small></h2>
+  <p>I refuse to answer this request on the grounds that I don't know the answer.</p>
+{% endblock %}
+<a href='/' class='btn'>Home</a>
+{% endblock %}

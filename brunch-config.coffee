@@ -63,6 +63,7 @@ module.exports = config:
       ]
     sass:
       options:
+        mode: 'native'
         debug: 'debug'
         allowCache: true
         includePaths: [

@@ -1,3 +1,14 @@
 from django.shortcuts import render
 
-# Create your views here.
+from browser.utils import get_fixture
+
+
+def sankey(request):
+    expts = get_fixture('browser.exp--tissues.yaml')
+
+    context = {
+      'experiments': expts,
+    }
+
+    return render(request, 'browser/sankey.html', context)
+

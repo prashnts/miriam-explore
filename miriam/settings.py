@@ -115,4 +115,4 @@ if PRODUCTION:
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-    ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*.herokuapp.com', '*.noop.pw']
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '.noop.pw']

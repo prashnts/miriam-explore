@@ -63,7 +63,6 @@ module.exports = config:
       ]
     sass:
       options:
-        mode: 'ruby'
         debug: 'debug'
         allowCache: true
         includePaths: [

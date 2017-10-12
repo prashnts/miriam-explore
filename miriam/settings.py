@@ -108,7 +108,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'public'),  # brunch builds
 ]
 
+WHITENOISE_STATIC_PREFIX = '/static/'
+
 if PRODUCTION:
     SECRET_KEY = os.environ['SECRET_KEY']
-    MIDDLEWARE.insert(0, 'whitenoise.middleware.WhiteNoiseMiddleware')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*.herokuapp.com', '*.noop.pw']

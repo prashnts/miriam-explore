@@ -3,8 +3,8 @@ echarts = require 'echarts'
 require 'echarts/dist/extension/dataTool'
 
 class NodeNetwork
-  constructor: (id) ->
-    @el = document.getElementById id
+  constructor: (el) ->
+    @el = el
     @chart = echarts.init @el, 'roma'
 
   drawGraph: (xml) =>
@@ -71,6 +71,6 @@ class NodeNetwork
     $.get '/static/aorta.gexf', @drawGraph, 'xml'
 
 
-module.exports = ->
-  nn = new NodeNetwork 'browserEntry'
+module.exports = (el) ->
+  nn = new NodeNetwork el
   nn.draw()

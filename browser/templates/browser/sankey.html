@@ -1,0 +1,44 @@
+{% extends 'browser/index.html' %}
+{% load tissue_inlines %}
+
+{% block content %}
+<div class='np-container cf'>
+  <div class='fl w-20'>
+    <div class='np-s'>
+      <p class='np-input-intro'>
+        <span>1</span>
+        Visualise
+      </p>
+      <div class='np-radio-input'>
+        <label>
+          <input type='radio' name='vis_type' value='mol' checked>
+          Molecular Functions
+        </label>
+        <label>
+          <input type='radio' name='vis_type' value='proc'>
+          Cellular Processes
+        </label>
+      </div>
+    </div>
+    <div class='np-tissues-list'>
+      <p class='np-input-intro'>
+        <span>2</span>
+        Tissue
+      </p>
+      <div class='np-radio-input'>
+      {% for exp in experiments %}
+        <h4>{{ exp.name }}</h4>
+        {% for tissue in exp.tissues %}
+          <label>
+            <input type='radio' name='selected_tissue' value='{{ exp.id }}-{{ tissue }}' {{ forloop.first | yesno:"checked," }}>
+            {{ tissue | humanise }}
+          </label>
+        {% endfor %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div id='sankeyNode' class='np-chart--root fl w-80'></div>
+</div>
+{% render_tissues %}
+{% endblock %}

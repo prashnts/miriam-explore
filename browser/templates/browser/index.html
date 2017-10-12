@@ -4,7 +4,13 @@
 {% block root-title %}Browser{% endblock %}
 
 {% block content %}
-<div id='browserEntry'></div>
+<div>
+  <ul class="list p0">
+    <li><a href="{% url 'browser_network' %}" class="link f5">Network</a></li>
+    <li><a href="{% url 'browser_heatmap' %}" class="link f5">Heatmap</a></li>
+    <li><a href="{% url 'browser_sankey' %}" class="link f5">Sankey</a></li>
+  </ul>
+</div>
 {% endblock %}
 
 {% block styles %}

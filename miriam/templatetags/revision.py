@@ -20,4 +20,4 @@ def revision(prod=False):
       channel = 'staging' if settings.STAGING else 'dev'
       return '#%s @%s' % (rev, channel)
     else:
-      return '#%s @prod' % (rev, channel)
+      return '#%s @prod' % rev

@@ -13,6 +13,9 @@ urlpatterns = [
     url(r'^privacy-policy/$',
         TemplateView.as_view(template_name='privacy_policy.html'),
         name='privacy_policy'),
+    url(r'^contact/$',
+        TemplateView.as_view(template_name='contact_us.html'),
+        name='contact_us'),
 ]
 
 if settings.DEBUG:

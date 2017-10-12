@@ -5,8 +5,8 @@ _startCase = require 'lodash/startCase'
 _snakeCase = require 'lodash/snakeCase'
 download = require 'downloadjs'
 
-CELLPROC = 'Cellular Processes'
-MOLFN = 'Molecular Functions'
+CELLPROC = 'Cellular Functions'
+MOLFN = 'Molecular Activities'
 
 
 class SankeyChart
@@ -95,7 +95,12 @@ class SankeyChart
 
   draw: (tissue) ->
     url = "/static/#{tissue}.json"
-    @chart.showLoading()
+    loading_opts =
+      text: 'Loading'
+      maskColor: 'rgba(0, 0, 0, 0)'
+      zlevel: 10
+
+    @chart.showLoading('default', loading_opts)
     $.get url, (data) => @drawGraph(data, tissue)
 
   save: (fileName) ->
@@ -110,9 +115,10 @@ module.exports = (el) ->
   chart = new SankeyChart el
 
   update_chart = () ->
-    tissue = $('input[name="selected_tissue"]:checked').val()
-    chart.draw "sankey.mol.#{tissue}"
+    tissue = $('input[name="sankey-args.tissue"]:checked').val()
+    kind = $('input[name="sankey-args.kind"]:checked').val()
+    chart.draw "sankey.#{kind}.#{tissue}"
 
   update_chart()
 
-  $('input[name="selected_tissue"]').on 'change', () -> update_chart()
+  $('input[name^="sankey-args"]').on 'change', () -> update_chart()

@@ -2,35 +2,40 @@
 {% load tissue_inlines %}
 
 {% block content %}
-<div class='np-container cf'>
+<div class='np-container cf np-presentation'>
+  <h1>Ontology Impact</h1>
   <div class='fl w-20'>
-    <div class='np-s'>
+    <div class='pt-card np-card--elevation-minimal pa0'>
       <p class='np-input-intro'>
         <span>1</span>
         Visualise
       </p>
-      <div class='np-radio-input'>
-        <label>
-          <input type='radio' name='vis_type' value='mol' checked>
-          Molecular Functions
-        </label>
-        <label>
-          <input type='radio' name='vis_type' value='proc'>
+      <small>Choose between</small>
+      <div class='np-radio-input '>
+        <label class='pt-control pt-radio'>
+          <input type='radio' name='sankey-args.kind' value='func' checked>
+          <span class='pt-control-indicator'></span>
           Cellular Processes
+        </label>
+        <label class='pt-control pt-radio'>
+          <input type='radio' name='sankey-args.kind' value='mol'>
+          <span class='pt-control-indicator'></span>
+          Molecular Activities
         </label>
       </div>
     </div>
-    <div class='np-tissues-list'>
+    <div class='pt-card np-card--elevation-minimal pa0'>
       <p class='np-input-intro'>
         <span>2</span>
         Tissue
       </p>
       <div class='np-radio-input'>
       {% for exp in experiments %}
-        <h4>{{ exp.name }}</h4>
+        <h6>{{ exp.name }}</h6>
         {% for tissue in exp.tissues %}
-          <label>
-            <input type='radio' name='selected_tissue' value='{{ exp.id }}-{{ tissue }}' {{ forloop.first | yesno:"checked," }}>
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='{{ exp.id }}-{{ tissue }}' {{ forloop.first | yesno:"checked," }}>
+            <span class='pt-control-indicator'></span>
             {{ tissue | humanise }}
           </label>
         {% endfor %}
@@ -38,7 +43,8 @@
       </div>
     </div>
   </div>
-  <div id='sankeyNode' class='np-chart--root fl w-80'></div>
+  <div class='np-chart fl w-80'>
+    <div id='sankeyNode' class='np-chart--root'></div>
+  </div>
 </div>
-{% render_tissues %}
 {% endblock %}

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "brunch b -p"
+    "build": "brunch b -p",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Prashant Sinha",
   "license": "MIT",

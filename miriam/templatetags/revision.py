@@ -11,10 +11,13 @@ def revision(prod=False):
     if 'HEROKU_SLUG_COMMIT' in os.environ:
       rev = os.environ['HEROKU_SLUG_COMMIT'][:7]
     else:
-      rev = git.revision if git.revision else 'unknown'
+      try:
+        rev = git.revision if git.revision else 'unknown'
+      except Exception:
+        rev = ''
 
     if settings.DEBUG or settings.STAGING:
       channel = 'staging' if settings.STAGING else 'dev'
       return '#%s @%s' % (rev, channel)
     else:
-      return ''
+      return '#%s @prod' % (rev, channel)

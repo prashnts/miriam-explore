@@ -10,6 +10,9 @@ body
   &.pt-dark
     background: $pt-dark-app-background-color
 
+main
+  min-height: 70vh
+
 .np-container
   max-width: 1200px
   margin: 0 auto
@@ -29,4 +32,47 @@ a.skiptocontent
     top: 0
 
 .np-navbar-logo
-  //
+  img
+    height: 25px
+
+.np-box--elevation-minimal
+  box-shadow: 0 2px 6px 1px #E3E9F4
+
+.np-navbar
+  box-shadow: 0 2px 6px 1px #E3E9F4
+  background: #293461
+  color: #fff
+
+  a[role='button']
+    color: #E3E9F4
+    text-transform: uppercase
+    letter-spacing: 1px
+
+    &:hover, &:active
+      color: inherit
+
+.np-footer
+  color: #424B5B
+
+.np-presentation
+  color: #9299A6
+
+  h1, h2
+    color: #293461
+    text-transform: uppercase
+    font-weight: 300
+
+  h1
+    font-size: 1.4rem
+    letter-spacing: 1px
+
+  h2
+    font-size: 1.2rem
+
+.np-reset-link
+  text-decoration: none
+  color: inherit
+
+  &:active, &:hover, &:focus
+    text-decoration: none
+    color: inherit

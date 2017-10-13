@@ -26,11 +26,11 @@
   <header>
   {% block header-content %}
     <a href='#mainblock' class='skiptocontent' tabindex='1'>Skip to Content</a>
-    <nav data-toggle-target class='pt-navbar pt-navbar-fixed'>
+    <nav data-toggle-target class='pt-navbar np-navbar'>
       <div class='np-container'>
         <div class='pt-navbar-group pt-align-left'>
           <a href='/' class='np-navbar-logo'>
-            <img src='{% static "img/miriam-logo-1x.png" %}' alt='miriam homepage' title='Home'>
+            <img src='{% static "img/miriam-logo-light-1x.png" %}' alt='miriam homepage' title='Home'>
           </a>
         </div>
         <div class='pt-navbar-group pt-align-right'>
@@ -40,7 +40,7 @@
           <a role='button' href='{% url "browser_network" %}' class='pt-button pt-minimal'>
             Network
           </a>
-          <a role='button' href='' class='pt-button pt-minimal'>
+          <a role='button' href='{% url "browser_network" %}' class='pt-button pt-minimal'>
             Export
           </a>
         </div>
@@ -59,7 +59,7 @@
   {% endblock %}
   </main>
   <footer class="pt4 ph3 ph5-m ph6-l mid-gray">
-    <div class='np-container'>
+    <div class='np-container np-footer'>
       <p class="tc">
         <span class='dib'>&copy; 2017 <b class="ttu">miriam</b></span>
         <span class='dib mh2'>|</span>

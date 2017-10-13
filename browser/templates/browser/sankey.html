@@ -1,16 +1,16 @@
 {% extends 'browser/index.html' %}
 {% load tissue_inlines %}
 
+{% block title %}Ontology Impact{% endblock %}
+
 {% block content %}
 <div class='np-container cf np-presentation'>
   <h1>Ontology Impact</h1>
   <div class='fl w-20'>
-    <div class='pt-card np-card--elevation-minimal pa0'>
+    <div class='pt-card np-box--elevation-minimal pa0'>
       <p class='np-input-intro'>
-        <span>1</span>
         Visualise
       </p>
-      <small>Choose between</small>
       <div class='np-radio-input '>
         <label class='pt-control pt-radio'>
           <input type='radio' name='sankey-args.kind' value='func' checked>
@@ -24,9 +24,8 @@
         </label>
       </div>
     </div>
-    <div class='pt-card np-card--elevation-minimal pa0'>
+    <div class='pt-card np-box--elevation-minimal pa0'>
       <p class='np-input-intro'>
-        <span>2</span>
         Tissue
       </p>
       <div class='np-radio-input'>

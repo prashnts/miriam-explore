@@ -1,0 +1,31 @@
+body
+  background: #fff
+
+.np-card--root
+  box-shadow: 0 2px 6px 1px #E3E9F4
+  position: relative
+  overflow: hidden
+  z-index: 1
+  height: 200px
+  display: flex
+  align-items: flex-end
+  padding: 10px 20px
+  text-decoration: none
+
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    height: 120px
+    width: 100%
+    left: 0
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%)
+    z-index: -1
+
+  img
+    position: absolute
+    max-width: 100%
+    bottom: 0
+    left: 0
+    z-index: -1
+

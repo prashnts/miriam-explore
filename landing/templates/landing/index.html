@@ -1,3 +1,60 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load brunch %}
 
-{% block root-title %}Landing{% endblock %}
+{% block root-title %}miRiam{% endblock %}
+
+{% block content %}
+<div class='np-container np-presentation mt5'>
+  <h1>Presentation</h1>
+  <p class='f4'>miRiam provides access to interaction networks of mRNA translation regulation through intronic miRNAs under various tissue-specific cellular contexts.</p>
+
+  <div class='cf mv5'>
+      <div class='fl w-third pa2'>
+        <a href="{% url 'browser_sankey' %}" class='np-reset-link'>
+          <div class='pt-card pt-interactive np-card--root mr2'>
+            <div>
+              <h2>Explore Ontology</h2>
+              <p>Impact on Cellular Processes and Molecular Functions</p>
+            </div>
+            <img src='{% static "img/card--sankey-clip.jpg" %}'>
+          </div>
+        </a>
+      </div>
+      <div class='fl w-third pa2'>
+        <a href="{% url 'browser_network' %}" class='np-reset-link'>
+          <div class='pt-card pt-interactive np-card--root mr2'>
+            <div>
+              <h2>Browse Networks</h2>
+              <p>Tissue-specific miRNA-gene interactions.</p>
+            </div>
+            <img src='{% static "img/card--network-clip.jpg" %}'>
+          </div>
+        </a>
+      </div>
+      <div class='fl w-third pa2'>
+        <a href="{% url 'browser_network' %}" class='np-reset-link'>
+          <div class='pt-card pt-interactive np-card--root'>
+            <div>
+              <h2>Export Dataset</h2>
+            </div>
+            <img src='{% static "img/card--tables-clip.jpg" %}'>
+          </div>
+        </a>
+      </div>
+  </div>
+
+  <h1>Abstract</h1>
+  <img src='{% static "img/info--mirna-regulation.png" %}' class='fr mw5'>
+  <div class='mw6'>
+    <p>Gene regulatory effects of microRNAs at a post-transcriptional level has been established over the last decade. In this study, we analyse the interaction networks of mRNA translation regulation through intronic miRNA, under various tissue-specific cellular contexts, taking into account the thermodynamic affinity, kinetics, and the presence of competitive interactors. This database, and analysis has been made available through an open-access web-server, \texttt{miRiam}, to promote further exploration.
+    </p>
+    <p>
+    Here we report that expression of genes involved in Apoptosis Processes, Immune System Processes, Translation Regulator Activities, and Molecular Transport Activities within the cell are predominately regulated by miRNA mediation. Our findings further indicate that this regulatory effect has a profound effect in controlling protein crowding inside the cell. A miRNA mediated gene expression regulation serves as a temporal regulator, allowing the cellular machinery to temporarily `pause' the translation of mRNA, indicating that the miRNA--mRNA interactions may be important for governing the optimal usage of cell volume.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+  {{ 'landing' | style_bundle }}
+{% endblock %}

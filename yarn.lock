@@ -15,6 +15,29 @@
     tether "^1.4"
     tslib "^1.5.0"
 
+"@blueprintjs/core@^1.32.0":
+  version "1.32.0"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/core/-/core-1.32.0.tgz#49a3659124f63054d50adb864eb4505a6a99099b"
+  dependencies:
+    "@types/dom4" "^1.5.20"
+    "@types/tether" "^1.1.27"
+    classnames "^2.2"
+    dom4 "^1.8"
+    normalize.css "4.1.1"
+    pure-render-decorator "^1.1"
+    tether "^1.4"
+    tslib "^1.5.0"
+
+"@blueprintjs/table@^1.29.1":
+  version "1.29.1"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/table/-/table-1.29.1.tgz#1ee9276a3e9062e1b7a0b6ed2be0d76fadb007b8"
+  dependencies:
+    "@blueprintjs/core" "^1.32.0"
+    classnames "^2.2"
+    es6-shim "^0.35"
+    pure-render-decorator "^1.1"
+    tslib "^1.5.0"
+
 "@types/dom4@^1.5.20":
   version "1.5.20"
   resolved "https://registry.yarnpkg.com/@types/dom4/-/dom4-1.5.20.tgz#ccf636d3b794fe65a4191ebc7ff979a78efea6c2"
@@ -2074,6 +2097,10 @@ es-to-primitive@^1.1.1:
     is-callable "^1.1.1"
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
+
+es6-shim@^0.35:
+  version "0.35.3"
+  resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
 
 escape-html@~1.0.3:
   version "1.0.3"

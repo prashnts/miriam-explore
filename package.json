@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@blueprintjs/core": "^1.23.1",
+    "@blueprintjs/table": "^1.29.1",
     "auto-reload-brunch": "^2.7.1",
     "autoprefixer": "^7.1.2",
     "babel-brunch": "^6.1.1",

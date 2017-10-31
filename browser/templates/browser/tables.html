@@ -14,13 +14,15 @@
       <div class='np-radio-input'>
       {% for exp in experiments %}
         <h6>{{ exp.name }}</h6>
+        <ul class='list pl0 np-tablist' role='tablist'>
         {% for tissue in exp.tissues %}
-          <label class='pt-control pt-radio'>
-            <input type='radio' name='sankey-args.tissue' value='{{ exp.id }}-{{ tissue }}' {{ forloop.first | yesno:"checked," }}>
-            <span class='pt-control-indicator'></span>
-            {{ tissue | humanise }}
-          </label>
+          <li role='tab' aria-selected='{% if tissue.id == sample_id %}true{% endif %}'>
+            <a href='{% url "browser_tables" sample_id=tissue.id %}'>
+              {{ tissue.name }}
+            </a>
+          </li>
         {% endfor %}
+        </ul>
       {% endfor %}
       </div>
     </div>
@@ -38,9 +40,8 @@
     </div>
     <div class='np-table-container pt-card pa0 np-box--elevation-minimal'>
       {{ table | safe }}
-
-      {% render_tables_paginator sample_id current page_max %}
     </div>
+    {% render_tables_paginator sample_id current page_max %}
   </div>
 </div>
 {% endblock %}

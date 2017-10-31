@@ -40,8 +40,36 @@
 
 .np-table-container
   overflow: auto
+  max-height: 70vh
 
 table.np-table
   white-space: nowrap
   font-family: Input
   font-size: 12px
+
+.np-tablist
+  a
+    display: block
+    padding: 5px
+    color: #424B5B
+    text-decoration: none
+    border-radius: 3px
+
+    &:hover, &:focus
+      text-decoration: none
+      background: #EBF1F5
+
+    &:focus
+      background: #D8E1E8
+
+  li[aria-selected='true']
+    a
+      background: #CED9E0
+
+.np-paginator
+  margin: 0 auto
+  width: 100%
+  justify-content: center
+
+  a
+    width: 50px

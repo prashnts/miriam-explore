@@ -56,18 +56,25 @@ def get_paging_elements(current, size):
 @register.simple_tag
 def render_tables_paginator(sample_id, current, size):
     pages = get_paging_elements(current, size)
+    page_url = lambda page: reverse('browser_tables', kwargs={'sample_id': sample_id, 'page': page})
+
+    prev_url = page_url(current - 1) if current > 1 else '#'
+    next_url = page_url(current + 1) if current < size else '#'
+
     buttons = []
+    buttons.append(f'<a role="button" class="pt-button pt-icon-arrow-left" href="{prev_url}"></a>')
 
     for page in pages:
         if page['ellipsis']:
             buttons.append('<a role="button" class="pt-button pt-icon-more" href="#"></a>')
         else:
             active = 'pt-active' if page['active'] else ''
-            url = reverse('browser_tables', kwargs={'sample_id': sample_id, 'page': page['nr']})
 
-            button = f'<a role="button" class="pt-button {active}" href="{url}">{page["nr"]}</a>'
+            button = f'<a role="button" class="pt-button {active}" href="{page_url(page["nr"])}">{page["nr"]}</a>'
             buttons.append(button)
 
+    buttons.append(f'<a role="button" class="pt-button pt-icon-arrow-right" href="{next_url}"></a>')
+
     buttons_rendered = '\n'.join(buttons)
-    btn_group = f'<div class="pt-button-group">{buttons_rendered}</div>'
+    btn_group = f'<div class="pt-button-group np-paginator">{buttons_rendered}</div>'
     return mark_safe(btn_group)

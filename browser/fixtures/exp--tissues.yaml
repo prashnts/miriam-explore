@@ -2,45 +2,87 @@
   url: https://www.ebi.ac.uk/gxa/experiments/E-MTAB-5214/Results
   id: emtab2919
   tissues:
-    - adrenal_gland
-    - aorta
-    - atrial_appendage_of_heart
-    - breast__mammary_tissue_
-    - cerebellum
-    - cerebral_cortex
-    - coronary_artery
-    - cortex_of_kidney
-    - ectocervix
-    - esophagus_muscularis_mucosa
-    - fallopian_tube
-    - frontal_cortex__ba9_
-    - heart_left_ventricle
-    - hippocampus
-    - hypothalamus
-    - leukemia_cell_line
-    - liver
-    - lung
-    - ovary
-    - pancreas
-    - pituitary_gland
-    - prostate_gland
-    - sigmoid_colon
-    - skeletal_muscle
-    - skin_of_lower_leg
-    - skin_of_suprapubic_region
-    - spinal_cord__cervical_c_1_
-    - spleen
-    - stomach
-    - subcutaneous_adipose_tissue
-    - substantia_nigra
-    - terminal_ileum_of_small_intestine
-    - testis
-    - thyroid
-    - tibial_artery
-    - tibial_nerve
-    - transformed_fibroblast
-    - transverse_colon
-    - urinary_bladder
-    - uterus
-    - vagina
-    - whole_blood
+    - id: emtab2919-adrenal_gland
+      name: Adrenal Gland
+    - id: emtab2919-aorta
+      name: Aorta
+    - id: emtab2919-atrial_appendage_of_heart
+      name: Atrial appendage of Heart
+    - id: emtab2919-breast__mammary_tissue_
+      name: Breast mammary tissue
+    - id: emtab2919-cerebellum
+      name: Cerebellum
+    - id: emtab2919-cerebral_cortex
+      name: Cerebral Cortex
+    - id: emtab2919-coronary_artery
+      name: Coronary Artery
+    - id: emtab2919-cortex_of_kidney
+      name: Cortex of Kidney
+    - id: emtab2919-ectocervix
+      name: Ectocervix
+    - id: emtab2919-esophagus_muscularis_mucosa
+      name: Esophagus Muscularis Mucosa
+    - id: emtab2919-fallopian_tube
+      name: Fallopian tube
+    - id: emtab2919-frontal_cortex__ba9_
+      name: Frontal Cortex
+    - id: emtab2919-heart_left_ventricle
+      name: Heart (left ventricle)
+    - id: emtab2919-hippocampus
+      name: Hippocampus
+    - id: emtab2919-hypothalamus
+      name: Hypothalamus
+    - id: emtab2919-leukemia_cell_line
+      name: Leukemia Cell-line
+    - id: emtab2919-liver
+      name: Liver
+    - id: emtab2919-lung
+      name: Lung
+    - id: emtab2919-ovary
+      name: Ovary
+    - id: emtab2919-pancreas
+      name: Pancreas
+    - id: emtab2919-pituitary_gland
+      name: Pituitary Gland
+    - id: emtab2919-prostate_gland
+      name: Prostate Gland
+    - id: emtab2919-sigmoid_colon
+      name: Sigmoid Colon
+    - id: emtab2919-skeletal_muscle
+      name: Skeletal Muscle
+    - id: emtab2919-skin_of_lower_leg
+      name: Skin of Lower Leg
+    - id: emtab2919-skin_of_suprapubic_region
+      name: Skin of Suprapubic Region
+    - id: emtab2919-spinal_cord__cervical_c_1_
+      name: Spinal Cord Cervical
+    - id: emtab2919-spleen
+      name: Spleen
+    - id: emtab2919-stomach
+      name: Stomach
+    - id: emtab2919-subcutaneous_adipose_tissue
+      name: Subcutaneous Adipose Tissue
+    - id: emtab2919-substantia_nigra
+      name: Substantia Nigra
+    - id: emtab2919-terminal_ileum_of_small_intestine
+      name: Terminal Ileum of Small-Intestine
+    - id: emtab2919-testis
+      name: Testis
+    - id: emtab2919-thyroid
+      name: Thyroid
+    - id: emtab2919-tibial_artery
+      name: Tibial Artery
+    - id: emtab2919-tibial_nerve
+      name: Tibial Nerve
+    - id: emtab2919-transformed_fibroblast
+      name: Transformed Fibroblast
+    - id: emtab2919-transverse_colon
+      name: Transverse Colon
+    - id: emtab2919-urinary_bladder
+      name: Urinary Bladder
+    - id: emtab2919-uterus
+      name: Uterus
+    - id: emtab2919-vagina
+      name: Vagina
+    - id: emtab2919-whole_blood
+      name: Whole Blood

@@ -33,9 +33,9 @@
         <h6>{{ exp.name }}</h6>
         {% for tissue in exp.tissues %}
           <label class='pt-control pt-radio'>
-            <input type='radio' name='sankey-args.tissue' value='{{ exp.id }}-{{ tissue }}' {{ forloop.first | yesno:"checked," }}>
+            <input type='radio' name='sankey-args.tissue' value='{{ tissue.id }}' {{ forloop.first | yesno:"checked," }}>
             <span class='pt-control-indicator'></span>
-            {{ tissue | humanise }}
+            {{ tissue.name | humanise }}
           </label>
         {% endfor %}
       {% endfor %}

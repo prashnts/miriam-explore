@@ -15,7 +15,7 @@ make_identifier = lambda id: py_(['np', id]).join('_').camel_case().value()
 
 @register.filter
 def humanise(text):
-  return py_.human_case(text)
+    return py_.human_case(text)
 
 @register.filter(is_safe=True)
 def jsonify(object, args=None):

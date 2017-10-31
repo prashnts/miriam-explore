@@ -1,0 +1,46 @@
+{% extends 'browser/index.html' %}
+{% block title %}Dataset{% endblock %}
+{% load tissue_inlines %}
+{% load tables_mixins %}
+
+{% block content %}
+<div class='np-container cf np-presentation'>
+  <h1>Explore Dataset</h1>
+  <div class='fl w-20'>
+    <div class='pt-card np-box--elevation-minimal pa0'>
+      <p class='np-input-intro'>
+        Tissue
+      </p>
+      <div class='np-radio-input'>
+      {% for exp in experiments %}
+        <h6>{{ exp.name }}</h6>
+        {% for tissue in exp.tissues %}
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='{{ exp.id }}-{{ tissue }}' {{ forloop.first | yesno:"checked," }}>
+            <span class='pt-control-indicator'></span>
+            {{ tissue | humanise }}
+          </label>
+        {% endfor %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class='fl w-80 ph3'>
+    <div class='cf'>
+      <div class='fl w-60'>
+        <h4>{{ sample_id | humanise }}</h4>
+      </div>
+      <div class='fl w-40 tr'>
+        <div class="pt-button-group pt-minimal pt-small">
+          <a class="pt-button pt-icon-download" tabindex="0" role="button">Download</a>
+        </div>
+      </div>
+    </div>
+    <div class='np-table-container pt-card pa0 np-box--elevation-minimal'>
+      {{ table | safe }}
+
+      {% render_tables_paginator sample_id current page_max %}
+    </div>
+  </div>
+</div>
+{% endblock %}

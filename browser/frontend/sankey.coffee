@@ -5,7 +5,7 @@ _startCase = require 'lodash/startCase'
 _snakeCase = require 'lodash/snakeCase'
 download = require 'downloadjs'
 
-CELLPROC = 'Cellular Functions'
+CELLPROC = 'Cellular Processes'
 MOLFN = 'Molecular Activities'
 
 
@@ -62,8 +62,9 @@ class SankeyChart
               formatter: (params) => @getProcess params.name
           itemStyle:
             normal:
-              borderColor: '#000'
+              borderColor: '#424B5B'
               borderType: 'solid'
+              borderWidth: 0.5
           lineStyle:
             normal:
               color: 'source'

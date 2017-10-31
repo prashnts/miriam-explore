@@ -1,7 +1,13 @@
+import pandas as pd
 import os
 import json
 import yaml
 
+SAMPLE_COLUMNS = [
+    'mirna', 'gene', 'host', 'dg', 'exp_gene', 'exp_host',
+    'ont_fnc_x', 'ont_mol_fn_x', 'ont_fnc_y', 'ont_mol_fn_y',
+    's_keq', 's_deg', 's_ont', 'score'
+]
 
 def get_fixture(fixture):
     '''Load a fixture file from fixture dir.
@@ -17,3 +23,8 @@ def get_fixture(fixture):
         elif ext == 'yaml':
             return yaml.load(fp)
         raise ValueError('Either json or yaml fixture supported.')
+
+
+def get_sample(sample_id):
+    df = pd.read_pickle(f'/Users/prashantsinha/.miriam/pickles/{sample_id}.pkl')
+    return df[SAMPLE_COLUMNS]

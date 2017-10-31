@@ -12,4 +12,5 @@ urlpatterns = [
     path('tables/', views.tables, name='browser_tables'),
     path('tables/<str:sample_id>/', views.tables, name='browser_tables'),
     path('tables/<str:sample_id>/<int:page>/', views.tables, name='browser_tables'),
+    path('tables/<str:sample_id>/download/', views.tables_download, name='browser_table_download'),
 ]

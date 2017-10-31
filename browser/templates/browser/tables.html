@@ -33,8 +33,8 @@
         <h4>{{ sample_id | humanise }}</h4>
       </div>
       <div class='fl w-40 tr'>
-        <div class="pt-button-group pt-minimal pt-small">
-          <a class="pt-button pt-icon-download" tabindex="0" role="button">Download</a>
+        <div class='pt-button-group pt-minimal pt-small'>
+          <a class='pt-button pt-icon-download' role='button' href='{% url "browser_table_download" sample_id=sample_id %}'>Download</a>
         </div>
       </div>
     </div>

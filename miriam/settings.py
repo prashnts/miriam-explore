@@ -10,7 +10,7 @@ PRODUCTION = 'PRODUCTION' in os.environ
 SECRET_KEY = 'ko)7y)3fm&1w(mwy#-x**l^r#hi6jn)yvjv2h#l%c810y)s2#p'
 DEBUG = not PRODUCTION
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '.noop.pw', '.no.op']
 
 
 # Application definition
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'annoying',
 
     'miriam',
     'browser',
@@ -119,5 +120,3 @@ if PRODUCTION:
     SECRET_KEY = os.environ['SECRET_KEY']
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-
-    ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '.noop.pw']

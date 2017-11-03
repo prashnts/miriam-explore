@@ -76,5 +76,5 @@ def render_tables_paginator(sample_id, current, size):
     buttons.append(f'<a role="button" class="pt-button pt-icon-arrow-right" href="{next_url}"></a>')
 
     buttons_rendered = '\n'.join(buttons)
-    btn_group = f'<div class="pt-button-group np-paginator">{buttons_rendered}</div>'
+    btn_group = f'<div class="pt-button-group pt-minimal np-paginator">{buttons_rendered}</div>'
     return mark_safe(btn_group)

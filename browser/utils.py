@@ -5,9 +5,12 @@ import yaml
 
 SAMPLE_COLUMNS = [
     'mirna', 'gene', 'host', 'dg', 'exp_gene', 'exp_host',
-    'ont_fnc_x', 'ont_mol_fn_x', 'ont_fnc_y', 'ont_mol_fn_y',
-    's_keq', 's_deg', 's_ont', 'score'
+    'score', 'ont_fnc_x', 'ont_mol_fn_x', 'ont_fnc_y', 'ont_mol_fn_y',
+    's_keq', 's_deg', 's_ont',
 ]
+
+SAMPLE_PATH = os.env['SAMPLE_PICKLES_PATH']
+
 
 def get_fixture(fixture):
     '''Load a fixture file from fixture dir.
@@ -26,5 +29,5 @@ def get_fixture(fixture):
 
 
 def get_sample(sample_id):
-    df = pd.read_pickle(f'/Users/prashantsinha/.miriam/pickles/{sample_id}.pkl')
+    df = pd.read_pickle(f'{SAMPLE_PATH}/{sample_id}.pkl')
     return df[SAMPLE_COLUMNS]

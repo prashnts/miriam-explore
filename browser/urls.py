@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, RedirectView
 from . import views
 
 urlpatterns = [
-    path('/', RedirectView.as_view(url='/'), name='browser_home'),
+    path('', RedirectView.as_view(url='/'), name='browser_home'),
     path('network/', TemplateView.as_view(template_name='browser/network.html'), name='browser_network'),
     path('heatmap/', TemplateView.as_view(template_name='browser/heatmap.html'), name='browser_heatmap'),
     path('sankey/', views.sankey, name='browser_sankey'),

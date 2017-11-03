@@ -12,6 +12,13 @@ register = Library()
 # Make a nice-looking identifier for use within js.
 make_identifier = lambda id: py_(['np', id]).join('_').camel_case().value()
 
+# Get the list of tissue and experiment ids
+experiments = get_fixture('browser.exp--tissues.yaml')
+
+
+@register.filter
+def sample_format(text):
+    return py_.human_case(text)
 
 @register.filter
 def humanise(text):

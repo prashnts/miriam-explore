@@ -9,7 +9,7 @@ SAMPLE_COLUMNS = [
     's_keq', 's_deg', 's_ont',
 ]
 
-SAMPLE_PATH = os.env['SAMPLE_PICKLES_PATH']
+SAMPLE_PATH = os.environ['SAMPLE_PICKLES_PATH']
 
 
 def get_fixture(fixture):

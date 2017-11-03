@@ -84,6 +84,9 @@ module.exports = config:
       '@blueprintjs/core': [
         'dist/blueprint.css'
       ]
+    globals:
+      jQuery: 'jquery'
+      $: 'jquery'
 
   modules:
     nameCleaner: (path) ->

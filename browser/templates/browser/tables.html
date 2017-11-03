@@ -7,7 +7,7 @@
 <div class='np-container cf np-presentation'>
   <h1>Explore Dataset</h1>
   <div class='fl w-20'>
-    <div class='pt-card np-box--elevation-minimal pa0'>
+    <div class='pa0'>
       <p class='np-input-intro'>
         Tissue
       </p>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class='np-table-container pt-card pa0 np-box--elevation-minimal'>
+    <div class='np-table-container pt-card pa0 np-box--elevation-minimal mb3' id='tablesNode'>
       {{ table | safe }}
     </div>
     {% render_tables_paginator sample_id current page_max %}

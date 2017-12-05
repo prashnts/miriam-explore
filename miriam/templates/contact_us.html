@@ -5,30 +5,20 @@
 
 {% block content %}
 <section class='np-container'>
-  <h2>There are multiple ways to Contact Us</h2>
+  <h2>You may reach the authors at</h2>
 
   <ul>
     <li>
-      <p>Write to us at <a href='mailto:noobz@convoke.io'>noobz@convoke.io</a>.</p>
+      <p>Email: <a href='mailto:prashant@noop.pw'>prashant@noop.pw</a>.</p>
     </li>
     <li>
-      <p>If postal addresses are your thing:</p>
+      <p>Mail:</p>
       <address>
-        <span>104, Computer Centre</span><br>
-        <span>Cluster Innovation Centre</span><br>
-        <span>G.C Narang Marg, University of Delhi</span><br>
-        <span>Delhi - 110007</span>
+        <span>7 (R) Boulevard Jourdan</span><br>
+        <span>Fondation Maison de L'Inde</span><br>
+        <span>Paris, France 75014</span><br>
       </address>
     </li>
-    <li>
-      <p>Transit: Vishwavidyalaya station of Delhi Metro service.</p>
-    </li>
   </ul>
-
-  <form action='' method='post'>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type='submit' value='Send message'/>
-  </form>
 </section>
 {% endblock %}

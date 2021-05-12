@@ -1,0 +1,377 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Ontology Impact // miRiam</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+
+  <link rel="apple-touch-icon" sizes="180x180" href='/static/img/favicon/apple-touch-icon.png'>
+  <link rel="icon" type="image/png" sizes="32x32" href='/static/img/favicon/favicon-32x32.png'>
+  <link rel="icon" type="image/png" sizes="16x16" href='/static/img/favicon/favicon-16x16.png'>
+  <link rel="manifest" href='/static/img/favicon/manifest.json'>
+  <link rel="mask-icon" href='/static/img/favicon/safari-pinned-tab.svg' color="#293461">
+  <link rel="shortcut icon" href='/static/img/favicon/favicon.ico'>
+  <meta name="msapplication-config" content='/static/img/favicon/browserconfig.xml'>
+  <meta name="theme-color" content="#293461">
+
+  <meta itemprop='csrf-token' content='CVMSW8n4FT3zyt03X4yCB7e8KjztLR0nVEK3fK5IuBTirHjg7EJO7nYFnUxc1URA'>
+
+  <link rel='stylesheet' type='text/css' href='/static/css/vendors.css'>
+  <link rel='stylesheet' type='text/css' href='/static/css/miriam.css'>
+
+  <link rel='stylesheet' type='text/css' href='/static/css/browser.css'>
+
+
+</head>
+<body class=''>
+  <header>
+
+    <a href='#mainblock' class='skiptocontent' tabindex='1'>Skip to Content</a>
+    <nav data-toggle-target class='pt-navbar np-navbar'>
+      <div class='np-container'>
+        <div class='pt-navbar-group pt-align-left'>
+          <a href='/' class='np-navbar-logo'>
+            <img src='/static/img/miriam-logo-light-1x.png' alt='miriam homepage' title='Home'>
+          </a>
+        </div>
+        <div class='pt-navbar-group pt-align-right'>
+          <a role='button' href='/browser.html' class='pt-button pt-minimal'>
+            Browser
+          </a>
+          <a role='button' href='/network.html' class='pt-button pt-minimal'>
+            Network
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+
+  </header>
+  <main id='placetRoot' class='pt3'>
+
+    <div>
+
+<div class='np-container cf np-presentation'>
+  <h1>Ontology Impact</h1>
+  <div class='fl w-20'>
+    <div class='pt-card np-box--elevation-minimal pa0'>
+      <p class='np-input-intro'>
+        Visualise
+      </p>
+      <div class='np-radio-input '>
+        <label class='pt-control pt-radio'>
+          <input type='radio' name='sankey-args.kind' value='func' checked>
+          <span class='pt-control-indicator'></span>
+          Cellular Processes
+        </label>
+        <label class='pt-control pt-radio'>
+          <input type='radio' name='sankey-args.kind' value='mol'>
+          <span class='pt-control-indicator'></span>
+          Molecular Activities
+        </label>
+      </div>
+    </div>
+    <div class='pt-card np-box--elevation-minimal pa0'>
+      <p class='np-input-intro'>
+        Tissue
+      </p>
+      <div class='np-radio-input'>
+
+        <h6>E-MTAB-2919</h6>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-adrenal_gland' checked>
+            <span class='pt-control-indicator'></span>
+            Adrenal gland
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-aorta' >
+            <span class='pt-control-indicator'></span>
+            Aorta
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-atrial_appendage_of_heart' >
+            <span class='pt-control-indicator'></span>
+            Atrial appendage of heart
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-breast__mammary_tissue_' >
+            <span class='pt-control-indicator'></span>
+            Breast mammary tissue
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-cerebellum' >
+            <span class='pt-control-indicator'></span>
+            Cerebellum
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-cerebral_cortex' >
+            <span class='pt-control-indicator'></span>
+            Cerebral cortex
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-coronary_artery' >
+            <span class='pt-control-indicator'></span>
+            Coronary artery
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-cortex_of_kidney' >
+            <span class='pt-control-indicator'></span>
+            Cortex of kidney
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-ectocervix' >
+            <span class='pt-control-indicator'></span>
+            Ectocervix
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-esophagus_muscularis_mucosa' >
+            <span class='pt-control-indicator'></span>
+            Esophagus muscularis mucosa
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-fallopian_tube' >
+            <span class='pt-control-indicator'></span>
+            Fallopian tube
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-frontal_cortex__ba9_' >
+            <span class='pt-control-indicator'></span>
+            Frontal cortex
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-heart_left_ventricle' >
+            <span class='pt-control-indicator'></span>
+            Heart left ventricle
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-hippocampus' >
+            <span class='pt-control-indicator'></span>
+            Hippocampus
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-hypothalamus' >
+            <span class='pt-control-indicator'></span>
+            Hypothalamus
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-leukemia_cell_line' >
+            <span class='pt-control-indicator'></span>
+            Leukemia cell line
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-liver' >
+            <span class='pt-control-indicator'></span>
+            Liver
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-lung' >
+            <span class='pt-control-indicator'></span>
+            Lung
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-ovary' >
+            <span class='pt-control-indicator'></span>
+            Ovary
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-pancreas' >
+            <span class='pt-control-indicator'></span>
+            Pancreas
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-pituitary_gland' >
+            <span class='pt-control-indicator'></span>
+            Pituitary gland
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-prostate_gland' >
+            <span class='pt-control-indicator'></span>
+            Prostate gland
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-sigmoid_colon' >
+            <span class='pt-control-indicator'></span>
+            Sigmoid colon
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-skeletal_muscle' >
+            <span class='pt-control-indicator'></span>
+            Skeletal muscle
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-skin_of_lower_leg' >
+            <span class='pt-control-indicator'></span>
+            Skin of lower leg
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-skin_of_suprapubic_region' >
+            <span class='pt-control-indicator'></span>
+            Skin of suprapubic region
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-spinal_cord__cervical_c_1_' >
+            <span class='pt-control-indicator'></span>
+            Spinal cord cervical
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-spleen' >
+            <span class='pt-control-indicator'></span>
+            Spleen
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-stomach' >
+            <span class='pt-control-indicator'></span>
+            Stomach
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-subcutaneous_adipose_tissue' >
+            <span class='pt-control-indicator'></span>
+            Subcutaneous adipose tissue
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-substantia_nigra' >
+            <span class='pt-control-indicator'></span>
+            Substantia nigra
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-terminal_ileum_of_small_intestine' >
+            <span class='pt-control-indicator'></span>
+            Terminal ileum of small intestine
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-testis' >
+            <span class='pt-control-indicator'></span>
+            Testis
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-thyroid' >
+            <span class='pt-control-indicator'></span>
+            Thyroid
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-tibial_artery' >
+            <span class='pt-control-indicator'></span>
+            Tibial artery
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-tibial_nerve' >
+            <span class='pt-control-indicator'></span>
+            Tibial nerve
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-transformed_fibroblast' >
+            <span class='pt-control-indicator'></span>
+            Transformed fibroblast
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-transverse_colon' >
+            <span class='pt-control-indicator'></span>
+            Transverse colon
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-urinary_bladder' >
+            <span class='pt-control-indicator'></span>
+            Urinary bladder
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-uterus' >
+            <span class='pt-control-indicator'></span>
+            Uterus
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-vagina' >
+            <span class='pt-control-indicator'></span>
+            Vagina
+          </label>
+
+          <label class='pt-control pt-radio'>
+            <input type='radio' name='sankey-args.tissue' value='emtab2919-whole_blood' >
+            <span class='pt-control-indicator'></span>
+            Whole blood
+          </label>
+
+
+      </div>
+    </div>
+  </div>
+  <div class='np-chart fl w-80'>
+    <div id='sankeyNode' class='np-chart--root'></div>
+  </div>
+</div>
+
+    </div>
+
+  </main>
+  <footer class="pt4 ph3 ph5-m ph6-l mid-gray">
+    <div class='np-container np-footer'>
+      <p class="tc">
+        <span class='dib'>&copy; 2017 <b class="ttu">miriam</b></span>
+        <span class='dib mh2'>|</span>
+        <a class="link" href='/contact/'> Contact </a>
+        <span class='dib mh2'>|</span>
+        <code class='dib'>#f70dd07 @prod</code>
+      </p>
+    </div>
+  </footer>
+
+
+    <script type='text/javascript' src='/static/js/vendors.js'></script>
+
+    <script type='text/javascript' src='/static/js/miriam.js'></script>
+    <script type='text/javascript'>require('miriam')();</script>
+
+
+
+    <script type='text/javascript' src='/static/js/browser.js'></script>
+    <script type='text/javascript'>require('browser')();</script>
+
+
+
+</body>
+</html>

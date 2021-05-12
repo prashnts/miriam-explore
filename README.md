@@ -3,6 +3,10 @@
 miRiam provides access to interaction networks of mRNA translation regulation through intronic miRNAs under various tissue-specific cellular contexts.
 This repo contains source code for the network.
 
+# ARCHIVED!
+
+This repo is now archived. To keep this running, and reduce cost, I ended up exporting the django website into static pages. This is hosted on Netlify. Consecutively, the "view table" and data export features were removed from the app. I have instead uploaded those datasets (python pickle files) in this repo.
+
 ## Quickstart
 Server is written using `django`, and in `python 3.6`. Client-side code is compiled using `brunch`.
 
